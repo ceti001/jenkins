@@ -1,6 +1,10 @@
 pipeline {
  agent any
- 
+ stages {
+   stage('Build') {
+     steps {
+       echo 'Building...'
+       sh 'apt install mvn' 
  stages {
    stage('Build') {
      steps {
