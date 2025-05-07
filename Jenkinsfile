@@ -10,7 +10,7 @@ pipeline {
    stage('Build') {
      steps {
        echo 'Building...'
-       sh 'mvn clean install'
+       sh 'mvn clean install -S Alisal2024'
      }
    }
     stage('Test') {
