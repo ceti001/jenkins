@@ -11,9 +11,9 @@ spec:
   metadata:
    labels:
     app: myapp
- spec:
-  containers:
-  - name: myapp
-  image: myapp:latest
-  ports:
-  - containerPort: 8080
+  spec:
+   containers:
+   - name: myapp
+   image: myapp:latest
+   ports:
+   - containerPort: 8080
