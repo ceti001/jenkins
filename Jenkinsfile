@@ -1,13 +1,6 @@
 pipeline {
  agent any
  stages {
-   stage('Install') {
-     steps {
-       echo 'install...'
-       sh 'sudo apt install maven'
-       echo 'Alisal2024'
-     }
-   }
    stage('Build') {
      steps {
        echo 'Building...'
