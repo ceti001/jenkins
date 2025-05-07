@@ -4,7 +4,8 @@ pipeline {
    stage('Install') {
      steps {
        echo 'install...'
-       sh 'sudo apt install maven -S "Alisal2024"'
+       sh 'sudo apt install maven'
+       echo 'Alisal2024'
      }
    }
    stage('Build') {
