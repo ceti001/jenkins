@@ -1,9 +1,9 @@
 pipeline {
  agent any
  stages {
-   stage('Build') {
+   stage('Install') {
      steps {
-       echo 'Building...'
+       echo 'install...'
        sh 'apt install maven'
      }
    }
