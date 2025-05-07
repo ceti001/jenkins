@@ -4,13 +4,13 @@ pipeline {
    stage('Install') {
      steps {
        echo 'install...'
-       sh 'sudo apt install maven'
+       sh 'sudo apt install maven -S Alisal2024'
      }
    }
    stage('Build') {
      steps {
        echo 'Building...'
-       sh 'mvn clean install -S Alisal2024'
+       sh 'mvn clean install'
      }
    }
     stage('Test') {
