@@ -4,20 +4,27 @@ pipeline {
  stage('Build') {
  steps {
  echo 'Building...'
- // Comandos para compilar el código
+ sh 'mvn clean install'
  }
  }
  stage('Test') {
  steps {
  echo 'Testing...'
- // Comandos para ejecutar pruebas
+ sh 'mvn test'
  }
  }
- stage('Deploy') {
+ stage('Build Docker Image') {
  steps {
- echo 'Deploying...'
- // Comandos para desplegar el software
+ echo 'Building Docker Image...'
+ sh 'docker build -t myapp:latest .'
+ }
+ }
+ stage('Deploy to Kubernetes') {
+ steps {
+ echo 'Deploying to Kubernetes...'
+ sh 'kubectl apply -f deployment.yaml'
  }
  }
  }
-}
+ }
+
