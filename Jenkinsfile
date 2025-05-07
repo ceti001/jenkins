@@ -4,7 +4,9 @@ pipeline {
    stage('Build') {
      steps {
        echo 'Building...'
-       sh 'apt install maven' 
+       sh 'apt install maven'
+     }
+   }
  stages {
    stage('Build') {
      steps {
